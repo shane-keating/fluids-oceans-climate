@@ -18,7 +18,7 @@ Open the folder you created ("Lab1") and drag the contents of the downloaded fol
 
 Click Application Launcher > Terminal (Konsole)
 
-Type "juyter-notebook". This will open a new window in your web browser.
+Type "jupyter-notebook". (Be careful to type it exactly, including the hyphen). This will open a new window in your web browser.
 
 You will need to enter a "Token" to authenticate the notebook. In Konsole, copy/paste the URL provided into your web browser (or just right click > open link).
 
