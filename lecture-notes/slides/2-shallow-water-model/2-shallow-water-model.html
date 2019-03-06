@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atmospheric circulation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+      body { font-family: 'Georgia';letter-spacing:0.025em;}
+      h1, h2, h3 {
+        font-family: 'Georgia';
+        font-weight: normal;
+      }
+      .remark-slide-content h1 { font-size: 2.4em; color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content h2 { font-size: 1.55em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content  h3 { font-size: 1.4em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-fading { z-index: 9; } 
+        
+      /* Thanks to http://www.partage-it.com/animez-vos-presentations-remark-js/  (in French) */
+      .remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
+      .remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+        
+      /* Two-column layout */
+      .left-column {
+        width: 50%;
+        float: left;
+      }
+      .right-column {
+        width: 49%;
+        float: right;
+        padding-top: 0em;
+        margin-top: 0em;
+        text-align: left;
+      }    
+      .footnote {  
+        position:absolute;
+        bottom: 1em;
+        left: 14em;
+        font-size: 0.7em;
+       }
+        
+      /* Some special classes */
+      .title {font-size: 3.3em; color:#606060;font-weight:bold;letter-spacing:0.05em}
+      .subtitle {font-size: 1.4em}
+      .author {font-size: 1.4em; color:#606060;font-weight:bold;letter-spacing:0.02em}  
+      .coauthor {font-size: 1.0em; color:#606060;font-weight:bold;letter-spacing:0.02em}  
+      .institution {font-size: 1.0em;}
+      .date {font-size: 1.0em;font-style: italic}
+    
+      .cite {font-size: 0.8em; color:#33AA99;font-style: italic}
+      .strike {color:salmon;text-decoration:line-through}
+        
+      /*Set color scheme for links.*/    
+      a {text-decoration: none; color: #666666;text-align:center; width: 24%}
+      /*Setting link properties is particular, do not change order below*/   
+      a:visited {color:#666666}
+      a:hover {color:#33AA99}  
+      a:active, a#active {color:#FF9700;} 
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# Topic 2: The Shallow Water Model
+
+MATH3261/5285 Fluids, Ocean, and Climate
+
+[{Shane Keating}](https://srkeating.com/), School of Mathematics & Statistics
+
+UNSW Sydney, Term 1 2019
+        
+.footnote[Created with [{Remark.js}](http://remarkjs.com/) using [{Markdown}](https://daringfireball.net/projects/markdown/) +  [{MathJax}](https://www.mathjax.org/)]
+
+---
+class: middle, left
+
+# 2.1 The shallow water model
+
+> "Choke me in the shallow water before I get too deep."
+
+> Edie Brickell, *What I am*. 
+
+---
+class: middle, center
+
+## 1-layer shallow water model
+
+<img src="shallow-water1.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+## 1.5-layer shallow water model
+
+<img src="shallow-water2.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+## 2-layer shallow water model
+
+<img src="shallow-water3.png" align="center" width="100%"/>
+
+---
+class: middle, left
+
+
+# 2.2 Vorticity and potential vorticity
+
+> "Donde escono quei vortici?"
+
+> ("Whence come these vortices?")
+
+> Wolfgang Amadeus Mozart, *Don Giovanni, Act II*
+
+
+---
+class: middle, left
+
+Define 3D vorticity:
+
+$$\boldsymbol{\omega} = \boldsymbol{\nabla \times v}$$
+
+$$\left( \begin{array}{c} \omega_1 \\\ \omega_2 \\\ \omega_3 \end{array} \right)
+ = \left\[ \begin{array}{ccc} \boldsymbol{\hat{x}} & \boldsymbol{\hat{y}} & \boldsymbol{\hat{z}} \\\ \partial_x & \partial_y & \partial_z \\\ u & v & w \end{array} \right\] = \left( \begin{array}{c} w_y - v_z \\\ u_z - w_x \\\ v_x - u_y \end{array} \right)$$
+
+---
+class: middle, left
+
+Define circulation around a closed loop $\mathcal{C}$:
+
+$$\Gamma = \oint_\mathcal{C} \boldsymbol{v \; \cdot} \; d \boldsymbol{r}$$
+
+Stokes' theorem: 
+
+`$$\oint_\mathcal{C} \boldsymbol{v \; \cdot\; } d \boldsymbol{r} = \int_\mathcal{S} \boldsymbol{\nabla \times v \; \cdot\; } d \boldsymbol{S} = \int_\mathcal{S} \boldsymbol{\omega \; \cdot\; } d \boldsymbol{S}$$`
+
+Circulation around $\mathcal{C}$ = vorticity enclosed by $\mathcal{C}$
+
+Vorticity is the *circulation per area* around an infinitessimally small closed contour. 
+
+---
+class: middle, center
+
+## Solid body rotation with angular velocity $\Omega$
+
+<img src="rotational-flow.png" align="center" width="50%"/>
+
+$$u = - \Omega y, v = \Omega x$$
+
+$$\omega_3 = v_x - u_y = 2 \Omega$$
+
+Uniform vorticity: the same value at all points. Note the factor of $2$!
+
+---
+class: middle, center
+
+## Divergent flow
+
+<img src="divergent-flow.png" align="center" width="50%"/>
+
+$$u = \delta x, v = \delta y$$
+
+$$\omega_3 = v_x - u_y = 0$$
+
+Divergent / convergent flows are irrotational (zero vorticity).
+
+---
+class: middle, center
+
+## Shear flow
+
+<img src="shear-flow.png" align="center" width="50%"/>
+
+$$u = \alpha y, v = 0$$
+
+$$\omega_3 = v_x - u_y = - \alpha$$
+
+Even parallel flows can have vorticity! 
+
+---
+class: middle, center
+
+## Conservation of potential vorticity
+
+<img src="pv-conservation.png" align="center" width="80%"/>
+
+
+---
+class: middle, left
+
+# 2.4 The Hadley Cell
+
+> "The answer, my friend, is blowin' in the wind."
+
+> Bob Dylan
+
+---
+class: middle, center
+
+<img src="hadley-cell.png" align="center" width="100%"/>
+
+(Credit: G. Vallis)
+
+---
+class: middle, center
+
+<img src="trade-winds.png" align="center" width="70%"/>
+
+---
+class: middle, left
+
+# 2.5 Shallow water waves
+
+> "Is there any peace
+
+> In ever climbing up the climbing wave?"
+
+> Alfred, Lord Tennyson, *The Lotus-eaters*
+
+---
+class: middle, center
+
+<img src="dispersion-relation.png" align="center" width="100%"/>
+
+(Credit: I. Simpson)
+
+---
+class: middle, left
+
+# 2.6 Rossby waves
+
+> "Perhaps I occasionally sought to give, or inadvertently gave, to the student a sense of battle on the intellectual battlefield. If all you do is to give them a faultless and complete and uninhabited architectural masterpiece, then you do not help them to become builders of their own."
+
+> Carl-Gustaf Rossby
+---
+class: middle, center
+
+<img src="rossby-mechanism1.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+<img src="rossby-mechanism2.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+<img src="rossby-mechanism3.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+<img src="rossby-mechanism4.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+<img src="rossby-mechanism5.png" align="center" width="100%"/>
+
+
+   </textarea>
+    <!-- This is the link to the local copy of Remark -->
+    <script src="remark-latest.min.js" type="text/javascript"></script>
+    <!--<script src="./javascript/remark-latest.min.js" type="text/javascript"></script>-->
+    <!-- See discussion at https://github.com/gnab/remark/issues/222-->
+    <!-- You could alternately use the libraries from remote location -->
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>-->
+    
+    <script type="text/javascript">
+        var slideshow = remark.create({
+            navigation: {
+                click: false
+            },
+            properties: {
+                class: "center, middle"
+            },
+            countIncrementalSlides: false
+        });
+    </script>
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    <!-- If you want to run your presentation offline, you need to download the MathJax -->
+    <!-- libraries, then uncomment the line below and comment out the one above.-->
+    <!--<script "text/javascript" src="../../../javascript/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local"></script>-->
+</body>
+</html>
