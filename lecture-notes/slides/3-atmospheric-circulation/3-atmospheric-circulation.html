@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atmospheric circulation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+      body { font-family: 'Georgia';letter-spacing:0.025em;}
+      h1, h2, h3 {
+        font-family: 'Georgia';
+        font-weight: normal;
+      }
+      .remark-slide-content h1 { font-size: 2.4em; color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content h2 { font-size: 1.55em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content  h3 { font-size: 1.4em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-fading { z-index: 9; } 
+        
+      /* Thanks to http://www.partage-it.com/animez-vos-presentations-remark-js/  (in French) */
+      .remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
+      .remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+        
+      /* Two-column layout */
+      .left-column {
+        width: 50%;
+        float: left;
+      }
+      .right-column {
+        width: 49%;
+        float: right;
+        padding-top: 0em;
+        margin-top: 0em;
+        text-align: left;
+      }    
+      .footnote {  
+        position:absolute;
+        bottom: 1em;
+        left: 14em;
+        font-size: 0.7em;
+       }
+        
+      /* Some special classes */
+      .title {font-size: 3.3em; color:#606060;font-weight:bold;letter-spacing:0.05em}
+      .subtitle {font-size: 1.4em}
+      .author {font-size: 1.4em; color:#606060;font-weight:bold;letter-spacing:0.02em}  
+      .coauthor {font-size: 1.0em; color:#606060;font-weight:bold;letter-spacing:0.02em}  
+      .institution {font-size: 1.0em;}
+      .date {font-size: 1.0em;font-style: italic}
+    
+      .cite {font-size: 0.8em; color:#33AA99;font-style: italic}
+      .strike {color:salmon;text-decoration:line-through}
+        
+      /*Set color scheme for links.*/    
+      a {text-decoration: none; color: #666666;text-align:center; width: 24%}
+      /*Setting link properties is particular, do not change order below*/   
+      a:visited {color:#666666}
+      a:hover {color:#33AA99}  
+      a:active, a#active {color:#FF9700;} 
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# Topic 3: Atmospheric circulation
+
+
+MATH3261/5285: Fluids, Oceans, and Climate
+
+[{Shane Keating}](https://srkeating.com/), School of Mathematics and Statistics
+
+UNSW Sydney, Term 1 2019
+        
+.footnote[Created with [{Remark.js}](http://remarkjs.com/) using [{Markdown}](https://daringfireball.net/projects/markdown/) +  [{MathJax}](https://www.mathjax.org/)]
+
+---
+class: middle, left
+
+# 2.1 A brief overview of atmospheric circulation
+
+> "The storm is up, and all is on the hazard."
+
+> William Shakespeare, *Julius Caesar* Act V Scene 1. 
+
+---
+class: middle, center
+
+**General circulation** = large-scale motion of the atmosphere
+
+`$$\begin{align*}
+& 1000 \; \mbox{km} \qquad \longrightarrow & 10000 \; \mbox{km} \\
+& \mbox{synoptic scale} \qquad & \mbox{planetary scale}
+\end{align*}$$`
+
+---
+class: middle, center
+
+## Radiative equilibrium
+
+What would the temperature be if there was no atmosphere or ocean?
+
+<img src="radiative-equilibrium.png" align="center" width="50%"/>
+
+Assume that each point on Earth's surface absorbs incoming solar radiation and radiates as a "black body" with a temperature given by the **Stefan-Boltzmann law**
+
+`$$S_\mbox{in} ( \theta ) \left( 1 - \alpha \right) = \sigma \, T_\mbox{rad}^4 \left( \theta \right),$$`
+
+where $\alpha$ is the albedo and $\sigma = 5.67 \times 10^{-8} \; \mbox{W m}^{-2} \mbox{K}^{-4}$. 
+
+---
+class: left
+
+<img src="radiative-equilibrium_Vallis-2006.png" align="center" width="100%"/>
+
+(Credit: Vallis 2006)
+
+--
+
+**Emitting temperature** (outgoing radiation) has weaker pole-to-pole gradients than **radiative equilibrium temperature** (incoming radiation)
+
+--
+
+Heat is redistributed away from equator towards poles
+
+--
+
+Large-scale circulation in the atmosphere and ocean moves warm air/water towards poles and cool air/water towards equator, eroding gradient imposed by radiative forcing.
+
+---
+class: middle, center
+
+## Temperature and pressure vs height
+
+<img src="atm-temp-pres-profile_ESA.jpg" align="center" width="50%"/>
+
+(Credit: European Space Agency)
+
+---
+class: left
+
+**Troposphere (0 km to 8-18 km)**
+- monotonic *decrease* of temperature with height
+- **tropopause** (top of troposphere) changes height with latitude and season
+- contains about 80% of the mass of the atmosphere
+
+--
+
+**Stratosphere (to 50 km)**
+- temperature *increases* with height due to absorption of solar radiation by ozone layer
+- contains about 19.9% of the mass of the atmosphere
+
+--
+
+**Mesosphere, Thermosphere, and Exosphere (>50 km)**
+- temperature decreases with height then increases again
+- very tenuous / little mass
+
+
+---
+class: middle, center
+
+## Temperature and wind fields
+
+Temperature averaged in the zonal direction (east-west)
+
+<img src="atm-temp-2D.gif" align="center" width="70%"/>
+
+---
+class: middle, center
+
+## Temperature and wind fields
+
+Zonal wind (east-west) averaged in the zonal direction 
+
+<img src="atm-u-2D.gif" align="center" width="70%"/>
+
+---
+class: middle, center
+
+## Temperature and wind fields
+
+Meridional (north-south) wind averaged in the zonal direction 
+
+<img src="atm-v-2D.gif" align="center" width="70%"/>
+
+---
+class: left
+
+Tropopause bulges upward at equator
+
+Strong meridional temperature gradients at subtropics
+ - drives an eastward **zonal jet** because of thermal wind balance
+
+Convergence/divergence of meridional wind leads to upwelling and downwelling of air.  
+
+Surface winds are *not* due to thermal wind balance, but caused by alternating overturning cells
+
+---
+class: middle, center
+
+
+## Overturning circulation
+
+<img src="atm-overturning.png" align="center" width="100%"/>
+
+---
+class: middle, left
+
+## Zonally asymmetric winds
+
+<img src="rossby-wave.png" align="center" width="100%"/>
+
+- Zonal average ignores zonal asymmetries (good in tropics, not so good in mid-latitudes)
+- Midlatitude (polar) jet stream has strong meanders due to propagating **Rossby waves**
+- If these meanders grow and detatch, they produce cyclones and anticyclones, aka **weather**
+
+[{Youtube movie of Rossby waves}](https://www.youtube.com/watch?v=6UCiRIc0nK0)
+
+
+---
+class: middle, left
+
+# 2.2 The Hadley Cell
+
+> "The answer, my friend, is blowin' in the wind."
+
+> Bob Dylan
+
+---
+class: middle, center
+
+<img src="hadley-cell.png" align="center" width="100%"/>
+
+(Credit: G. Vallis)
+
+---
+class: middle, center
+
+<img src="trade-winds.png" align="center" width="70%"/>
+
+---
+class: middle, left
+
+# 2.3 Shallow water waves
+
+> "Is there any peace
+
+> In ever climbing up the climbing wave?"
+
+> Alfred, Lord Tennyson, *The Lotus-eaters*
+
+---
+class: middle, center
+
+<img src="dispersion-relation.png" align="center" width="100%"/>
+
+(Credit: I. Simpson)
+
+---
+class: middle, left
+
+# 2.4 Rossby waves
+
+> "Perhaps I occasionally sought to give, or inadvertently gave, to the student a sense of battle on the intellectual battlefield. If all you do is to give them a faultless and complete and uninhabited architectural masterpiece, then you do not help them to become builders of their own."
+
+> Carl-Gustaf Rossby
+---
+class: middle, center
+
+<img src="rossby-mechanism1.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+<img src="rossby-mechanism2.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+<img src="rossby-mechanism3.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+<img src="rossby-mechanism4.png" align="center" width="100%"/>
+
+---
+class: middle, center
+
+<img src="rossby-mechanism5.png" align="center" width="100%"/>
+
+
+   </textarea>
+    <!-- This is the link to the local copy of Remark -->
+    <script src="remark-latest.min.js" type="text/javascript"></script>
+    <!--<script src="./javascript/remark-latest.min.js" type="text/javascript"></script>-->
+    <!-- See discussion at https://github.com/gnab/remark/issues/222-->
+    <!-- You could alternately use the libraries from remote location -->
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>-->
+    
+    <script type="text/javascript">
+        var slideshow = remark.create({
+            navigation: {
+                click: false
+            },
+            properties: {
+                class: "center, middle"
+            },
+            countIncrementalSlides: false
+        });
+    </script>
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    <!-- If you want to run your presentation offline, you need to download the MathJax -->
+    <!-- libraries, then uncomment the line below and comment out the one above.-->
+    <!--<script "text/javascript" src="../../../javascript/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local"></script>-->
+</body>
+</html>
