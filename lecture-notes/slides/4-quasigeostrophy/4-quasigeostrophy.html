@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quasigeostrophy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+      body { font-family: 'Georgia';letter-spacing:0.025em;}
+      h1, h2, h3 {
+        font-family: 'Georgia';
+        font-weight: normal;
+      }
+      .remark-slide-content h1 { font-size: 2.4em; color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content h2 { font-size: 1.55em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content  h3 { font-size: 1.4em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-fading { z-index: 9; } 
+        
+      /* Thanks to http://www.partage-it.com/animez-vos-presentations-remark-js/  (in French) */
+      .remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
+      .remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+        
+      /* Two-column layout */
+      .left-column {
+        width: 50%;
+        float: left;
+      }
+      .right-column {
+        width: 49%;
+        float: right;
+        padding-top: 0em;
+        margin-top: 0em;
+        text-align: left;
+      }    
+      .footnote {  
+        position:absolute;
+        bottom: 1em;
+        left: 14em;
+        font-size: 0.7em;
+       }
+        
+      /* Some special classes */
+      .title {font-size: 3.3em; color:#606060;font-weight:bold;letter-spacing:0.05em}
+      .subtitle {font-size: 1.4em}
+      .author {font-size: 1.4em; color:#606060;font-weight:bold;letter-spacing:0.02em}  
+      .coauthor {font-size: 1.0em; color:#606060;font-weight:bold;letter-spacing:0.02em}  
+      .institution {font-size: 1.0em;}
+      .date {font-size: 1.0em;font-style: italic}
+    
+      .cite {font-size: 0.8em; color:#33AA99;font-style: italic}
+      .strike {color:salmon;text-decoration:line-through}
+        
+      /*Set color scheme for links.*/    
+      a {text-decoration: none; color: #666666;text-align:center; width: 24%}
+      /*Setting link properties is particular, do not change order below*/   
+      a:visited {color:#666666}
+      a:hover {color:#33AA99}  
+      a:active, a#active {color:#FF9700;} 
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: middle, center
+
+# Topic 4: The quasigeostrophic model
+
+
+MATH3261/5285: Fluids, Oceans, and Climate
+
+[{Shane Keating}](https://srkeating.com/), School of Mathematics and Statistics
+
+UNSW Sydney, Term 1 2019
+        
+.footnote[Created with [{Remark.js}](http://remarkjs.com/) using [{Markdown}](https://daringfireball.net/projects/markdown/) +  [{MathJax}](https://www.mathjax.org/)]
+
+---
+class: middle, left
+
+# 4.1 Scaling theory
+
+---
+class: middle, center
+
+## Scaling theory for the shallow water model 
+
+`$$
+\begin{align*}
+\frac{\partial}{\partial t} & = \frac{U}{L} \; \frac{\partial}{\partial \hat{t}}\\
+\mathbf{\nabla} & = \frac{1}{L} \; \mathbf{\hat{\nabla}}\\
+\mathbf{u} & = U \; \mathbf{\hat{u}}\\
+\eta & = \mathcal{H} \; \hat{\eta}\\
+f & = f_0 \; \hat{f}
+\end{align*}
+$$`
+
+---
+class: middle, center
+
+### Dimensional momentum equation
+
+$$
+\frac{\partial \mathbf{u}}{\partial t} + \mathbf{u \cdot \nabla u} + \mathbf{f \times u} = - g \nabla \eta
+$$
+
+### Non-dimensional momentum equation
+
+$$
+\mbox{Ro} \left[ \frac{\partial \mathbf{\hat{u}}}{\partial \hat{t}} + \mathbf{\hat{u} \cdot \hat{\nabla} \hat{u}} \right] + \mathbf{\hat{f} \times \hat{u}} = -\hat{\nabla} \hat{\eta}
+$$
+
+$$
+\mbox{Ro} = \frac{U}{f_0 L} = \mbox{Rossby number}
+$$
+
+---
+class: middle, center
+
+### Dimensional continuity equation
+
+`$$
+\frac{\partial h}{\partial t} + \mathbf{u \cdot \nabla} h + h \; \mathbf{\nabla \cdot h} = 0
+$$`
+
+### Non-dimensional continuity equation
+
+`$$
+\mbox{Ro} \; \mbox{F} \; \left[ \frac{\partial \hat{\eta}}{\partial \hat{t}} + \mathbf{\hat{u} \cdot \hat{\nabla}} \hat{\eta} \right] + \left( 1 + \mbox{Ro} \; \mbox{F} \; \hat{\eta} \right) \mathbf{\hat{\nabla} \cdot \hat{u}} = 0
+$$`
+
+$$ 
+\mbox{F} = \frac{L^2}{L_D^2} = \mbox{Froude number}
+$$
+$$
+L_D = \frac{\sqrt{g H}}{f_0} = \mbox{Rossby deformation scale}
+$$
+
+---
+class: middle, left
+
+## Quasigeostrophic limit
+
+$$
+\mbox{Ro} \ll 1 \quad \mbox{and} \quad \mbox{F} \approx O(1) \quad \Longrightarrow \quad L \approx L_D
+$$
+
+#### Ocean:
+
+$$
+L_D \approx 100 \; \mbox{km} \qquad \mbox{mesoscale (eddy scale)}
+$$
+
+#### Atmosphere:
+
+$$
+L_D \approx 1000 \; \mbox{km} \qquad \mbox{synoptic scale (weather scale)}
+$$
+
+---
+class: middle, center
+
+# 4.2 Asymptotic scaling theory
+
+---
+class: middle, left
+
+### Non-dimensional momentum equation
+
+$$
+\mbox{Ro} \left[ \frac{\partial \mathbf{\hat{u}}}{\partial \hat{t}} + \mathbf{\hat{u} \cdot \hat{\nabla} \hat{u}} \right] + \mathbf{\hat{f} \times \hat{u}} = -\hat{\nabla} \hat{\eta}
+$$
+
+### Non-dimensional continuity equation
+
+`$$
+\mbox{Ro} \; \mbox{F} \; \left[ \frac{\partial \hat{\eta}}{\partial \hat{t}} + \mathbf{\hat{u} \cdot \hat{\nabla}} \hat{\eta} \right] + \left( 1 + \mbox{Ro} \; \mbox{F} \; \hat{\eta} \right) \mathbf{\hat{\nabla} \cdot \hat{u}} = 0
+$$`
+
+---
+class: middle, left
+
+### Asymptotic scaling theory
+
+Expand fields in powers of $\mbox{Ro}$ and gather terms at each order:
+
+`$$
+\begin{align*}
+\hat{\eta} & = \hat{\eta}_0 + \mbox{Ro} \; \hat{\eta}_1 + \mbox{Ro}^2 \; \hat{\eta}_2 \\
+\mathbf{\hat{u}} & = \mathbf{\hat{u}}_1 + \mbox{Ro} \; \mathbf{\hat{u}}_1 + \mbox{Ro}^2 \; \mathbf{\hat{u}}_2 + \cdots \\
+\hat{f} & = 1 + \mbox{Ro} \; \hat{\beta} \; \hat{y}
+\end{align*}
+$$`
+
+- geostrophic flow: $\hat{\eta}_0$, $\mathbf{\hat{u}}_0$
+- ageostrophic flow: $\hat{\eta}_1$, $\mathbf{\hat{u}}_1$, $\hat{\eta}_2$, $\mathbf{\hat{u}}_2$, $\cdots$
+
+
+---
+class: middle, left
+
+## Summary: derivation of the QG system
+
+- non-dimensionalize the momentum and continuity equations and express in terms of $\mbox{Ro}$ and $\mbox{F}$
+
+- in limit $\mbox{Ro} \ll 1$, $F \approx O(1)$, expand $\hat{\eta}$, $\mathbf{\hat{u}}$, $\hat{f}$ in powers of $\mbox{Ro}$
+
+- collect terms in each equation at $O(1)$, $O(\mbox{Ro})$:  
+	- geostrophic flow $\hat{\eta}_0$, $\mathbf{\hat{u}}_0$, $\hat{\psi}_0$
+	- ageostrophic correction $\hat{\eta}_1$, $\mathbf{\hat{u}}_1$
+
+- take curl of $O(\mbox{Ro})$ momentum equation and combine with $O(\mbox{Ro})$ continuity equation
+	- non-dimensional QG potential vorticity equation
+
+- rescale to get dimensional QG potential vorticity equation
+
+
+---
+class: middle, center
+
+## Quasigeostrophic potential vorticity equation
+
+`$$
+\frac{D_0 Q}{D t} = 0, \qquad Q = \nabla^2 \psi + \beta y - \frac{\psi}{L_D^2}
+$$`
+
+`$$
+\frac{D_0}{D t} = \frac{\partial}{\partial t} + \mathbf{u}_0 \mathbf{\cdot \nabla} = \mbox{advection by geostrophic velocity}
+$$`
+
+---
+class: middle, center
+
+# 4.3 Rossby waves in the QG system
+
+---
+class: middle, left
+
+## Dispersion relation
+
+`$$
+\omega = k U - k \frac{\beta + k_D^2 U}{k^2 + l^2 + k_D^2}
+$$`
+
+### Case 1: $k_D = 0$
+
+`$$
+\omega = k U - k \frac{\beta}{k^2 + l^2}
+$$`
+- barotropic Rossby wave
+- effect of $U$ is to Doppler shift the frequency
+
+---
+class: middle, left
+
+
+### Case 2: $U = 0$
+
+`$$
+\omega = - k \frac{\beta}{k^2 + l^2 + k_D^2}
+$$`
+- baroclinic Rossby wave
+- get a maximum frequency of $\omega_{max} = \beta / 2 k_D$. 
+
+---
+class: center, middle
+
+<img src="bc_rossby_wave1.png" align="center" height="80%"/>
+
+---
+class: center, middle
+
+<img src="bc_rossby_wave2.png" align="center" height="80%"/>
+
+---
+
+   </textarea>
+    <!-- This is the link to the local copy of Remark -->
+    <script src="remark-latest.min.js" type="text/javascript"></script>
+    <!--<script src="./javascript/remark-latest.min.js" type="text/javascript"></script>-->
+    <!-- See discussion at https://github.com/gnab/remark/issues/222-->
+    <!-- You could alternately use the libraries from remote location -->
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>-->
+    
+    <script type="text/javascript">
+        var slideshow = remark.create({
+            navigation: {
+                click: false
+            },
+            properties: {
+                class: "center, middle"
+            },
+            countIncrementalSlides: false
+        });
+    </script>
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    <!-- If you want to run your presentation offline, you need to download the MathJax -->
+    <!-- libraries, then uncomment the line below and comment out the one above.-->
+    <!--<script "text/javascript" src="../../../javascript/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local"></script>-->
+</body>
+</html>

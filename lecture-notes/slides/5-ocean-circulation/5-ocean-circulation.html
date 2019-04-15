@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ocean circulation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+      
+    <style type="text/css">
+      body { font-family: 'Georgia';letter-spacing:0.025em;}
+      h1, h2, h3 {
+        font-family: 'Georgia';
+        font-weight: normal;
+      }
+      .remark-slide-content h1 { font-size: 2.4em; color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content h2 { font-size: 1.55em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content  h3 { font-size: 1.4em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-fading { z-index: 9; } 
+        
+      /* Thanks to http://www.partage-it.com/animez-vos-presentations-remark-js/  (in French) */
+      .remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
+      .remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+        
+      /* Two-column layout */
+      .left-column {
+        width: 50%;
+        float: left;
+      }
+      .right-column {
+        width: 49%;
+        float: right;
+        padding-top: 0em;
+        margin-top: 0em;
+        text-align: left;
+      }    
+      .footnote {  
+        position:absolute;
+        bottom: 1em;
+        left: 14em;
+        font-size: 0.7em;
+       }
+        
+      /* Some special classes */
+      .title {font-size: 3.3em; color:#606060;font-weight:bold;letter-spacing:0.05em}
+      .subtitle {font-size: 1.4em}
+      .author {font-size: 1.4em; color:#606060;font-weight:bold;letter-spacing:0.02em}  
+      .coauthor {font-size: 1.0em; color:#606060;font-weight:bold;letter-spacing:0.02em}  
+      .institution {font-size: 1.0em;}
+      .date {font-size: 1.0em;font-style: italic}
+    
+      .cite {font-size: 0.8em; color:#33AA99;font-style: italic}
+      .strike {color:salmon;text-decoration:line-through}
+        
+      /*Set color scheme for links.*/    
+      a {text-decoration: none; color: #666666;text-align:center; width: 24%}
+      /*Setting link properties is particular, do not change order below*/   
+      a:visited {color:#666666}
+      a:hover {color:#33AA99}  
+      a:active, a#active {color:#FF9700;} 
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+<img src="circulation.png" align="center" width="100%"/>
+
+# Topic 5: Ocean circulation
+
+MATH3261/5285: Fluids, Oceans, and Climate
+
+[{Shane Keating}](https://srkeating.com/), School of Mathematics and Statistics
+
+UNSW Sydney, Term 1, 2019
+        
+.footnote[Created with [{Remark.js}](http://remarkjs.com/) using [{Markdown}](https://daringfireball.net/projects/markdown/) +  [{MathJax}](https://www.mathjax.org/)]
+
+
+---
+class: left, middle
+
+# 5.1 A brief overview of the ocean circulation
+
+> "Look at the crowds of water-gazers there." 
+
+> Herman Melville, *Moby Dick*
+
+---
+class: center, middle
+
+<iframe width="750" height="420" src="https://www.youtube.com/embed/CCmTY0PKGDs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[{NASA | Perpetual Ocean}](https://youtu.be/CCmTY0PKGDs)
+
+---
+class: center, middle
+
+## Major surface ocean currents
+
+<img src="surface-currents.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+## Baroclinic instability
+
+***Baro*** *(pressure)* + ***cline*** *(slope)* : instability arising from sloped pressure contours
+
+> "It is the instability that gives rise to the large-scale and mesoscale motion in the atmopshere and the ocean - it produces atmopsheric weather systems, for example, and so is, perhaps, the form of hydrodynamic instability that most affects the human condition."
+
+> G. J. Vallis, *Atmospheric and Oceanic Fluid Dynamics*
+
+---
+class: left, middle
+
+## Baroclinic instability
+
+- generates midlatitude ocean eddies and weather systems
+- converts gravitational potential energy (stored in sloping density surfaces) into kinetic energy
+- transports heat poleward modifying climate and global energy budget
+
+---
+class: center, top
+
+## Convective instability
+
+<video preload="auto" width="80%" height="auto"  data-setup="{}" loop controls><source src="convection.mp4" type="video/mp4" /></video>
+
+- At rest with cold/dense fluid over warm/light fluid
+- Rest state is in unstable equilibrium
+
+---
+class: center, top
+
+## Convective instability
+
+<img src="convection0.png" align="center" width="100%"/>
+
+- At rest with cold/dense fluid over warm/light fluid
+- Rest state is in unstable equilibrium
+
+
+---
+class: center, top
+
+## Convective instability
+
+<img src="convection2.png" align="center" width="30%"/>
+
+- Initial potential energy: $PE_1 = g \; \rho \; z + g \; \left( \rho + \Delta \rho \right) \left( z + \Delta z \right)$
+
+---
+class: center, top
+
+## Convective instability
+
+<img src="convection3.png" align="center" width="30%"/>
+
+- Final potential energy: $PE_2 = g \; \left( \rho + \Delta \rho \right) \; z + g \; \rho \; \left( z + \Delta z \right)$
+--
+
+- If $\Delta \rho > 0$ then total PE decreases
+--
+
+- Kinetic energy increases (instability)
+
+---
+class: left, top
+
+## Available potential energy
+
+<img src="ape5.png" align="center" width="100%"/>
+
+- For a statified fluid with horizontal density surfaces, any adiabatic rearrangement of water parcels *increases* potential energy
+- Potential energy cannot be converted into kinetic energy 
+- Define **Available Potential Energy (APE)** as the PE available for conversion to KE
+- Sloping density surfaces in thermal wind balance have APE! 
+
+---
+class: left, top
+
+## Available potential energy
+
+<img src="ape1.png" align="center" width="100%"/>
+
+- Rest state with sloping isopycnals: $\overline{\rho}(y,z) = \overline{\rho}_y \; y + \overline{\rho_z} \; z$
+- Equilibrium state in thermal wind balance: $f_0 U_z = g/\rho_0 \; \overline{\rho}_y$
+
+---
+class: left, top
+
+## Available potential energy
+
+<img src="ape2.png" align="center" width="100%"/>
+
+- Rest state with sloping isopycnals: $\overline{\rho}(y,z) = \overline{\rho}_y \; y + \overline{\rho_z} \; z$
+- Equilibrium state in thermal wind balance: $f_0 U_z = g/\rho_0 \; \overline{\rho}_y$
+- Density difference: $\Delta \rho = \overline{\rho}_y \; \Delta y + \overline{\rho}_z \; \Delta z$
+---
+class: left, top
+
+## Available potential energy
+
+<img src="ape3.png" align="center" width="100%"/>
+
+- Rest state with sloping isopycnals: $\overline{\rho}(y,z) = \overline{\rho}_y \; y + \overline{\rho_z} \; z$
+- Equilibrium state in thermal wind balance: $f_0 U_z = g/\rho_0 \; \overline{\rho}_y$
+- Density difference: $\Delta \rho = \overline{\rho}_y \; \Delta y + \overline{\rho}_z \; \Delta z$
+
+---
+class: left, top
+
+## Available potential energy
+
+<img src="ape4.png" align="center" width="100%"/>
+
+- Rest state with sloping isopycnals: $\overline{\rho}(y,z) = \overline{\rho}_y \; y + \overline{\rho_z} \; z$
+- Equilibrium state in thermal wind balance: $f_0 U_z = g/\rho_0 \; \overline{\rho}_y$
+- Density difference: $\Delta \rho = \overline{\rho}_y \; \Delta y + \overline{\rho}_z \; \Delta z$
+- PE difference: 
+$$\Delta PE = - g \; \Delta \rho \; \Delta z = - g \overline{\rho}_z \;\Delta z \; \Delta y \; ( m - m\rho)$$
+- If $m < m_\rho$ then total PE decreases and KE increases
+
+---
+class: left, middle
+
+<img src="bci1.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+<img src="bci2.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+<img src="bci3.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+<img src="bci4.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+<img src="bci5.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+<img src="bci6.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+<img src="bci7.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+<img src="bci8.png" align="center" width="100%"/>
+
+---
+class: center, middle
+
+<video preload="auto" width="100%" height="auto"  data-setup="{}" loop controls><source src="bci.mp4" type="video/mp4" /></video>
+
+---
+class: left, middle
+
+<img src="bci0.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+# 5.2 The Ekman layer
+
+> "On studying the observations of wind and ice-drift taken during the drift of the *Fram*, Fridtjof Nansen found that the drift produced by a given wind did not, according to the general opinion, follow the wind's direction but deviated $20^\circ$-$40^\circ$ to the right."
+
+> Vagn Walfrid Ekman, *On the influence of the Earth's rotation on ocean currents* (1905).
+
+
+---
+class: center, middle
+
+<img src="fram.png" align="center" width="100%"/>
+
+---
+class: center, middle
+
+<img src="Ekman-pumping1.png" align="center" width="80%"/>
+
+---
+class: center, middle
+
+<img src="Ekman-pumping2.png" align="center" width="80%"/>
+
+---
+class: center, middle
+
+<img src="Ekman-pumping3.png" align="center" width="80%"/>
+
+---
+class: center, middle
+
+<img src="Ekman-pumping4.png" align="center" width="80%"/>
+
+---
+class: center, middle
+
+<img src="Ekman-pumping5.png" align="center" width="80%"/>
+
+---
+class: center, middle
+
+<img src="Ekman-pumping6.png" align="center" width="80%"/>
+
+
+---
+class: center, middle
+
+## Wind stress (N/m$^2$)
+
+<img src="wind-stress.png" align="center" width="100%"/>
+
+
+---
+class: center, middle
+
+## Ekman pumping (m/year)
+
+<img src="ekman-pumping.png" align="center" width="100%"/>
+
+---
+class: center, middle
+
+## Mean sea-surface height (cm)
+
+<img src="sea-surface-height.png" align="center" width="100%"/>
+
+---
+class: left, middle
+
+# 5.3 The wind-driven circulation
+
+> "*Definitive* papers are usually written when a subject is no longer interesting."
+
+> Walter Munk (1917-present)
+
+
+---
+class: center, middle
+
+<img src="Sverdrup-balance1.png" align="center" width="80%"/>
+
+
+---
+class: center, middle
+
+<img src="Sverdrup-balance2.png" align="center" width="80%"/>
+
+
+---
+class: center, middle
+
+<img src="Sverdrup-balance3.png" align="center" width="80%"/>
+
+
+---
+class: center, middle
+
+<img src="Sverdrup-balance4.png" align="center" width="80%"/>
+
+---
+class: center, middle
+
+## Stommel model (single gyre)
+
+<img src="stommel-model.png" align="center" width="100%"/>
+
+---
+class: center, middle
+
+## Stommel model (double gyre)
+
+<img src="double-gyre.png" align="center" width="100%"/>
+
+---
+class: center, middle
+
+## Stommel model (zonal winds)
+
+<img src="stommel-winds.png" align="center" width="100%"/>
+
+---
+class: center, middle
+
+## The East Australian Current
+
+<img src="eac.jpg" align="center" width="100%"/>
+
+[{Integrated Marine Observing System}](http://oceancurrent.imos.org.au/index.php)
+
+---
+class: left, middle
+
+## Conclusion
+
+> "We can count ourselves fortunate to live in a society and at a time when we are actually paid to explore the universe."
+
+> Henry Stommel (1920-1992)
+
+---
+class: left, middle
+
+## Some links: 
+
+- [{My research website}](https://srkeating.com/)
+
+- [{Mathematics for Planet Earth}](https://mathsforearth.com/)
+
+- [{Climate Change Research Centre}](https://www.ccrc.unsw.edu.au/)
+
+- [{Honours at UNSW Maths & Stats}](https://www.maths.unsw.edu.au/currentstudents/honours-overview)
+
+- [{PhD/MSc at UNSW Maths & Stats}](https://www.maths.unsw.edu.au/futurestudents/postgraduate-research)
+
+   </textarea>
+    <!-- This is the link to the local copy of Remark -->
+    <script src="remark-latest.min.js" type="text/javascript"></script>
+    <!--<script src="./javascript/remark-latest.min.js" type="text/javascript"></script>-->
+    <!-- See discussion at https://github.com/gnab/remark/issues/222-->
+    <!-- You could alternately use the libraries from remote location -->
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>-->
+    
+    <script type="text/javascript">
+        var slideshow = remark.create({
+            navigation: {
+                click: false
+            },
+            properties: {
+                class: "center, middle"
+            },
+            countIncrementalSlides: false
+        });
+    </script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    <!-- If you want to run your presentation offline, you need to download the MathJax -->
+    <!-- libraries, then uncomment the line below and comment out the one above.-->
+    <!--<script "text/javascript" src="../../../javascript/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local"></script>-->
+</body>
+</html>
